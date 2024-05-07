@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Home Page</title>
+    <link rel="stylesheet" href="style2.css">
+    <style>
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        .image-label img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    </style>
+</head>
+<body class="body"> 
+    
+    <div class="wrapper">
+        <header class="header">
+            <a href="#" class="logo"> Personal Home Page </a>
+        </header>
+
+        <div class="left-content">
+            <nav class="navbar">
+                <a href="#" id="academic-link">Academic Information</a>
+                <a href="#" id="personal-link">Personal Information</a>
+                <a href="#" id="family-link">Family</a>
+                <a href="#" id="about-link">About me</a>
+                <a href="#" id="resume-link">Resume</a>
+            </nav>
+        </div>
+
+        <div class="right-content" id="content-container">
+        </div>
+        
+    </div>
+
+    <footer class="footer">
+        <p>Batch Number 11 Year 2024</p>
+        <p>TELECALL INSTITUTE OF TECHNOLOGY INC.</p>
+    </footer>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var rightContainer = document.getElementById("content-container");
+
+            var navbarLinks = document.querySelectorAll(".navbar a");
+
+            navbarLinks.forEach(function(link) {
+                link.addEventListener("click", function(event) {
+                    event.preventDefault();
+
+                    var linkId = this.id;
+                    loadContent(linkId);
+                });
+            });
+
+            function loadContent(linkId) {
+                var content = ""; 
+
+                switch (linkId) {
+                    case "academic-link":
+                        content = `
+                            <div id="academic-info-content"> <!-- Wrap content with a div and give it an ID -->
+                                <h2>Academic Information</h2>
+                                <div class="image-container">
+                                    <div class="image-label">
+                                        <strong>School Image:</strong>
+                                        <img src="pup.jpg" alt="School Image">
+                                    </div>
+                                    <div class="image-label">
+                                        <strong>Your Picture:</strong>
+                                        <img src="1x1.png" alt="Your Picture">
+                                    </div>
+                                </div>
+                                <p>
+                                    <strong>School Name:</strong> Polytechnic University of the Philippines<br>
+                                    <strong>School Address and Contact Number:</strong> Anonas Street, Sta. Mesa, Manila | Contact: (02) 716-7832<br>
+                                    <strong>Student Number:</strong> 2021-05888-MN-0<br>
+                                    <strong>Course:</strong> Bachelor of Science in Computer Engineering<br>
+                                    <strong>Student Name:</strong> John Robert P. Legaspi<br>
+                                    <strong>Year:</strong> 3rd Year<br>
+                                </p>
+                            </div>`;
+                        break;
+                    case "personal-link":
+                        content = `
+                            <div id="personal-info-content"> 
+                                <h2>Personal Information</h2>
+                                <div class="image-container">
+                                    <div class="image-label">
+                                        <strong>Personal Image:</strong>
+                                        <img src="1x1.png" alt="Personal Image">
+                                    </div>
+                                    <div class="image-label">
+                                        <strong>Another Image:</strong>
+                                        <img src="like.jpg" alt="Another Image" style="width: 120px;">
+                                    </div>
+                                </div>
+                                <p>
+                                    <strong>Name:</strong> John Robert P. Legaspi<br>
+                                    <strong>Nickname:</strong> Jan<br>
+                                    <strong>Birth date:</strong> 03/12/2003<br>
+                                    <strong>Birth place:</strong> Angono, Rizal<br>
+                                    <strong>Age:</strong> 21<br>
+                                    <strong>Place of Birth:</strong> Angono, Rizal<br>
+                                    <strong>Address:</strong> 5237 Fahrenheit St. Palanan Makati City<br>
+                                    <strong>Height:</strong> 164 cm<br>
+                                    <strong>Phone:</strong> 09193549466<br>
+                                </p>
+                            </div>`;
+                        break;
+                    case "family-link":
+                        content = `
+                            <div id="family-info-content"> <!-- Wrap content with a div and give it an ID -->
+                                <h2>Family Information</h2>
+                                <div class="image-container">
+                                    <div class="image-label">
+                                        <strong>Family Image:</strong>
+                                        <img src="fam.jpg" alt="Family Image">
+                                    </div>
+                                    <div class="image-label">
+                                        <strong>Another Image:</strong>
+                                        <img src="fam2.jpg" alt="Another Family Image">
+                                    </div>
+                                </div>
+                                <p>
+                                    <strong>Father's Name:</strong> Roberto P. Legaspi<br>
+                                    <strong>Occupation:</strong> Technician<br>
+                                    <strong>Mother's Name:</strong> Marites P. Legaspi<br>
+                                    <strong>Occupation:</strong> N/A<br>
+                                    <strong>Brother's Name:</strong> Jazer Allen P. Legaspi<br>
+                                    <strong>Sister's Name:</strong> N/A<br>
+                                </p>
+                            </div>`;
+                        break;
+                    case "about-link":
+                        content = `
+                            <div id="about-info-content"> <!-- Wrap content with a div and give it an ID -->
+                                <h2>About Me</h2>
+                                <div class="image-container">
+                                    <div class="image-label">
+                                        <strong>About Image:</strong>
+                                        <img src="giga.jpg" alt="About Image">
+                                    </div>
+                                    <div class="image-label">
+                                        <strong>Another Image:</strong>
+                                        <img src="model.png" alt="Another About Image">
+                                    </div>
+                                </div>
+                                <p>
+                                    <strong>Describe Yourself:</strong> Handsome<br>
+                                    <strong>Weaknesses: </strong> Not being Handsome<br>
+                                    <strong>Hobbies:</strong> Reading<br>
+                                    <strong>Talent:</strong> Being Handsome<br>
+                                    <strong>Strength:</strong> Handsome Face<br>
+                                    <strong>Sports:</strong> Modelling<br>
+                                </p>
+                            </div>`;
+                        break;
+                    case "resume-link":
+                        content = `
+                            <div id="resume-info-content"> <!-- Wrap content with a div and give it an ID -->
+                                <h2>Resume</h2>
+                                <div class="image-container">
+                                    <div class="image-label">
+                                        <img src="resume.png" alt="Resume Placeholder Image">
+                                    </div>
+                                </div>
+                            </div>`;
+                        break;
+                }
+
+                rightContainer.innerHTML = content;
+            }
+        });
+    </script>
+</body>
+</html>

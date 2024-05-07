@@ -1,0 +1,593 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+    height: 1500px; /* Set a fixed height for the body */
+    overflow-y: scroll; /* Enable vertical scrolling */
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 120px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    border-bottom: 2px solid #faf6fae0;
+    transition: opacity 0.5s; 
+}
+
+.logo {
+    font-size: 32px;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Simplifica', sans-serif;
+    transform: translateX(490px);
+
+}
+
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    background-color: black;
+    text-align: center;
+    border-top: 2px solid #faf6fae0;
+    opacity: 0; 
+    transition: opacity 0.5s; 
+}
+
+.footer p {
+    font-size: 14px;
+    color: #ffffff;
+    font-family: 'Simplifica', sans-serif;
+}
+
+.container1,
+.container2,
+.container3,
+.container4,
+.container5,
+.container6 {
+    width: calc(33.33% - 20px); 
+    height: 500px; 
+    background-color: white;
+    float: left;
+    margin-left: 15px;
+    margin-top: 180px; 
+    border-radius: 10px;
+}
+
+.container1:first-child {
+    margin-left: 0; 
+}
+
+.footer {
+    clear: both; 
+}
+
+.container1 {
+    background-image: url(bg1.jpg);
+    background-size: cover;
+}
+
+.container2 {
+    background-image: url(bg2.jpg);
+    background-size: cover;
+}
+
+.container3 {
+    background-image: url(bg3.jpg);
+    background-size: cover;
+}
+
+.container4 {
+    background-image: url(bg4.jpg);
+    background-size: cover;
+}
+
+.container5 {
+    background-image: url(bg5.jpg);
+    background-size: cover;
+}
+
+.container6 {
+    background-image: url(bg6.jpg);
+    background-size: cover;
+}
+
+.custom-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #7c108ae0;
+    color: #ffffff;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    position: absolute;
+    top: 57%;
+    left: 17%;
+    transform: translate(-50%, -50%);
+    font-family: 'Simplifica', sans-serif;
+}
+
+.custom-button:hover {
+    background-color: #ff9bd2;
+    color: #000000;
+
+}
+.hidden {
+    display: none;
+}
+
+.custom-button2 {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #7c108ae0;
+    color: #ffffff;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    position: absolute;
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Simplifica', sans-serif;
+}
+
+.custom-button2:hover {
+    background-color: #ff9bd2;
+    color: #000000;
+}
+
+.custom-button3 {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #7c108ae0;
+    color: #ffffff;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    position: absolute;
+    top: 57%;
+    left: 84%;
+    transform: translate(-50%, -50%);
+    font-family: 'Simplifica', sans-serif;
+}
+
+.custom-button3:hover {
+    background-color: #ff9bd2ee;
+    color: #000000;
+}
+
+.custom-button4 {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0a6a28e0;
+    color: #ffffff;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    position: absolute;
+    top: 152%;
+    left: 17%;
+    transform: translate(-50%, -50%);
+    font-family: 'Simplifica', sans-serif;
+}
+
+.custom-button4:hover {
+    background-color: #b75213ed;
+    color: #000000;
+}
+
+.custom-button5 {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0a6a28e0;
+    color: #ffffff;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    position: absolute;
+    top: 152%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Simplifica', sans-serif;
+}
+
+.custom-button5:hover {
+    background-color: #b75213ed;
+    color: #000000;
+}
+
+.custom-button6 {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0a6a28e0;
+    color: #ffffff;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    position: absolute;
+    top: 152%;
+    left: 83%;
+    transform: translate(-50%, -50%);
+    font-family: 'Simplifica', sans-serif;
+}
+
+.custom-button6:hover {
+    background-color: #b75213ed;
+    color: #000000;
+}
+
+/* Modal style */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+
+.modal-content {
+    background-image: url(bg1.jpg);
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 5px;
+    width: 50%; /* Adjust the width as needed */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    animation-name: modalopen;
+    animation-duration: 0.5s;
+}
+
+@keyframes modalopen {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-background {
+    background-color: rgba(133, 19, 168, 0.775); /* Semi-transparent white background */
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.modal-body {
+    font-family: 'Simplifica', sans-serif;
+    color: #ffffff;
+
+}
+
+.modal2 {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+
+.modal-content2 {
+    background-image: url(bg2.jpg);
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 5px;
+    width: 50%; /* Adjust the width as needed */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    animation-name: modalopen;
+    animation-duration: 0.5s;
+}
+
+@keyframes modalopen {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-background2 {
+    background-color: rgba(133, 19, 168, 0.775); /* Semi-transparent white background */
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.modal-body2 {
+    font-family: 'Simplifica', sans-serif;
+    color: #ffffff;
+
+}
+
+.modal3 {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+
+.modal-content3 {
+    background-image: url(bg3.jpg);
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 5px;
+    width: 50%; /* Adjust the width as needed */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    animation-name: modalopen;
+    animation-duration: 0.5s;
+}
+
+@keyframes modalopen {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-background3 {
+    background-color: rgba(133, 19, 168, 0.775); /* Semi-transparent white background */
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.modal-body3 {
+    font-family: 'Simplifica', sans-serif;
+    color: #ffffff;
+
+}
+
+.modal4 {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+
+.modal-content4 {
+    background-image: url(bg4.jpg);
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 5px;
+    width: 50%; /* Adjust the width as needed */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    animation-name: modalopen;
+    animation-duration: 0.5s;
+}
+
+@keyframes modalopen {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-background4 {
+    background-color: #b75213da;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.modal-body4 {
+    font-family: 'Simplifica', sans-serif;
+    color: #ffffff;
+
+}
+
+.modal5 {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+
+.modal-content5 {
+    background-image: url(bg5.jpg);
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 5px;
+    width: 50%; /* Adjust the width as needed */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    animation-name: modalopen;
+    animation-duration: 0.5s;
+}
+
+@keyframes modalopen {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-background5 {
+    background-color: #b75213da;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.modal-body5 {
+    font-family: 'Simplifica', sans-serif;
+    color: #ffffff;
+
+}
+
+.modal-body5 h3{
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.modal6 {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+
+.modal-content6 {
+    background-image: url(bg5.jpg);
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 5px;
+    width: 50%; /* Adjust the width as needed */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    animation-name: modalopen;
+    animation-duration: 0.5s;
+}
+
+@keyframes modalopen {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-background6 {
+    background-color: #b75213da;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.modal-body6 {
+    font-family: 'Simplifica', sans-serif;
+    color: #ffffff;
+
+}
+
+.modal-body5 .resume-style {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-body5 .resume-style img {
+    border-radius: 10px; /* Adjust the value as needed */
+}
+
+.modal-body6 .gallery-style {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2px;
+}
+
+.modal-body6 .gallery-style img {
+    border-radius: 10px; /* Adjust the value as needed */
+    margin-left: 2px;
+}
+
+.modal-body6 h3 {
+    text-align: center;
+    margin-bottom: 5px;
+}
+

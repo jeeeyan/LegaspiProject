@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">TELECALL</a>
+        <nav class="navbar">
+            <a href="#">Home</a>
+            <a href="#">Qualification Offered</a>
+            <a href="#">Gallery</a>
+            <a href="#">Career</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+    <section class="h-text">
+        <h1>TELECALL</h1>
+        <h2>INSTITUTE OF TECHNOLOGY</h2>
+        <p>An institute of higher learning that offers free study courses with the aim of training trainees.</p>
+        <!-- Custom button -->
+        <button class="custom-button">Learn More</button>
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-twitter"></i>
+    </section>
+
+    <!-- Your content here -->
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <img src="logo.png" alt="Footer Image">
+        <p>Address: Elsol Plaze, Brgy. 2, Cubayao, Laguna Philippines</p>
+        <p>Email: Telecall@example.com</p>
+        <p>Phone: 09123456789</p>
+    </footer>
+
+    <script>
+window.addEventListener('scroll', function() {
+    var footer = document.getElementById('footer');
+    var scrollPosition = window.innerHeight + window.scrollY;
+    var threshold = 100; // Adjust this value as needed
+
+    // Check if the scroll position is near the bottom
+    if (scrollPosition >= document.body.offsetHeight - threshold) {
+        footer.classList.add('show'); // Show the footer
+    } else {
+        footer.classList.remove('show'); // Hide the footer
+    }
+});
+
+
+    </script>
+</body>
+</html>

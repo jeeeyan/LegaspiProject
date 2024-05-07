@@ -1,0 +1,125 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 120vh;
+    background: url(bg.jpg) no-repeat;
+    overflow-y: auto; /* Allow vertical scrolling */
+    padding-top: 60px; /* Adjust this value according to the height of your header */
+    padding-bottom: 50px; /* Adjust this value according to the height of your footer */
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 32px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+.h-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 650px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.custom-button {
+    background-color: #5d077c; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px; /* Adjust the margin-top to position the button */
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.custom-button:hover {
+    background-color: #bf00ff; /* Darker green */
+}
+
+.fa-facebook {
+    position: absolute;
+    color: #5d077c; /* Your desired color */
+    top: 290px;
+    left: 230px;
+    font-size: 30px;
+}
+
+.fa-instagram {
+    position: absolute;
+    color: #5d077c; /* Your desired color */
+    top: 290px;
+    left: 310px;
+    font-size: 30px;
+}
+
+.fa-twitter {
+    position: absolute;
+    color: #5d077c; /* Your desired color */
+    top: 290px;
+    left: 390px;
+    font-size: 30px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px; /* Adjust height as needed */
+    padding: 20px 0;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 14px;
+    color: #000000;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s; /* Smooth transition for opacity */
+}
+
+.footer.show {
+    opacity: 1; /* Show the footer */
+}
+
+.footer p {
+    position: center;
+    margin-top: 10px;
+
+}
+
+.footer img {
+    width: 50px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Adjust spacing between image and text */
+}
